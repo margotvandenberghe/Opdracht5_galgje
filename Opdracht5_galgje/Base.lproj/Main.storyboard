@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,127 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Opdracht5_galgje" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G A L G J E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSN-QN-kM4">
+                                <rect key="frame" x="405.5" y="58" width="213" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxF-GW-2ZA">
+                                <rect key="frame" x="90" y="139" width="78" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="qH9-aS-Irg"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-3k-3Vu">
+                                <rect key="frame" x="753" y="503" width="59" height="216"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwS-qi-As2">
+                                <rect key="frame" x="243" y="139" width="79" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PL2-vB-Az2">
+                                <rect key="frame" x="397" y="139" width="78" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-M7-c9S">
+                                <rect key="frame" x="550" y="139" width="78" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gah-Vn-jfB">
+                                <rect key="frame" x="703" y="139" width="78" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emp-5O-SBc">
+                                <rect key="frame" x="856" y="139" width="78" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foutmelding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBO-Qf-NS1">
+                                <rect key="frame" x="90" y="727" width="844" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.86285665759999997" green="0.067101582399999998" blue="0.038962436910000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0E-4b-i4l">
+                                <rect key="frame" x="878" y="590" width="72" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="SPEEL"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GwS-qi-As2" firstAttribute="width" secondItem="fxF-GW-2ZA" secondAttribute="width" id="3U2-Dz-5BU"/>
+                            <constraint firstItem="GwS-qi-As2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="5oJ-tV-5zM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oSN-QN-kM4" secondAttribute="trailing" constant="540" id="6f1-b0-GA0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w8I-3k-3Vu" secondAttribute="trailing" constant="212" id="7ry-uV-i2Q"/>
+                            <constraint firstItem="QBO-Qf-NS1" firstAttribute="top" secondItem="n0E-4b-i4l" secondAttribute="bottom" constant="95" id="80x-uc-O6c"/>
+                            <constraint firstItem="QBO-Qf-NS1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="8rG-4W-Ilx"/>
+                            <constraint firstItem="Emp-5O-SBc" firstAttribute="leading" secondItem="gah-Vn-jfB" secondAttribute="trailing" constant="75" id="8ya-RX-dY1"/>
+                            <constraint firstItem="gah-Vn-jfB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="ALO-Qq-rJi"/>
+                            <constraint firstItem="PL2-vB-Az2" firstAttribute="leading" secondItem="GwS-qi-As2" secondAttribute="trailing" constant="75" id="CzE-vE-mbU"/>
+                            <constraint firstItem="gah-Vn-jfB" firstAttribute="width" secondItem="fxF-GW-2ZA" secondAttribute="width" id="DrG-fx-dsE"/>
+                            <constraint firstItem="PL2-vB-Az2" firstAttribute="height" secondItem="fxF-GW-2ZA" secondAttribute="height" id="Hbf-ZA-Xas"/>
+                            <constraint firstItem="Emp-5O-SBc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="Q05-Dh-sle"/>
+                            <constraint firstItem="Emp-5O-SBc" firstAttribute="width" secondItem="fxF-GW-2ZA" secondAttribute="width" id="SpS-cc-OUm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oSN-QN-kM4" secondAttribute="trailing" constant="405.5" id="U1Y-UU-Lda"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QBO-Qf-NS1" secondAttribute="trailing" constant="90" id="UpP-xZ-Q7L"/>
+                            <constraint firstItem="fxF-GW-2ZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Usn-MI-cRR"/>
+                            <constraint firstItem="oSN-QN-kM4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="320" id="Wpa-DO-AJW"/>
+                            <constraint firstItem="GwS-qi-As2" firstAttribute="leading" secondItem="fxF-GW-2ZA" secondAttribute="trailing" constant="75" id="YtO-Wv-kg0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QBO-Qf-NS1" secondAttribute="bottom" constant="20" id="ax1-P4-wIO"/>
+                            <constraint firstItem="GwS-qi-As2" firstAttribute="height" secondItem="fxF-GW-2ZA" secondAttribute="height" id="cSC-L8-Gv7"/>
+                            <constraint firstItem="gah-Vn-jfB" firstAttribute="leading" secondItem="4nc-M7-c9S" secondAttribute="trailing" constant="75" id="gq4-7W-cIe"/>
+                            <constraint firstItem="4nc-M7-c9S" firstAttribute="top" secondItem="oSN-QN-kM4" secondAttribute="bottom" constant="27" id="hcR-ia-Bdz"/>
+                            <constraint firstItem="Emp-5O-SBc" firstAttribute="height" secondItem="fxF-GW-2ZA" secondAttribute="height" id="in0-Ch-KYh"/>
+                            <constraint firstItem="oSN-QN-kM4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jjB-08-Aby"/>
+                            <constraint firstItem="oSN-QN-kM4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="ljb-5m-jwb"/>
+                            <constraint firstItem="QBO-Qf-NS1" firstAttribute="top" secondItem="w8I-3k-3Vu" secondAttribute="bottom" constant="8" id="mhG-WD-s6S"/>
+                            <constraint firstItem="4nc-M7-c9S" firstAttribute="leading" secondItem="PL2-vB-Az2" secondAttribute="trailing" constant="75" id="mnL-xW-Y7e"/>
+                            <constraint firstItem="fxF-GW-2ZA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="mnl-Tm-1ec"/>
+                            <constraint firstItem="PL2-vB-Az2" firstAttribute="width" secondItem="fxF-GW-2ZA" secondAttribute="width" id="piS-hf-Lzy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n0E-4b-i4l" secondAttribute="trailing" constant="74" id="q8G-K4-XpJ"/>
+                            <constraint firstItem="w8I-3k-3Vu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="753" id="qNk-d2-dhH"/>
+                            <constraint firstItem="PL2-vB-Az2" firstAttribute="top" secondItem="oSN-QN-kM4" secondAttribute="bottom" constant="27" id="r28-7s-b3U"/>
+                            <constraint firstItem="n0E-4b-i4l" firstAttribute="leading" secondItem="w8I-3k-3Vu" secondAttribute="trailing" constant="66" id="rPv-6l-pSC"/>
+                            <constraint firstItem="gah-Vn-jfB" firstAttribute="height" secondItem="fxF-GW-2ZA" secondAttribute="height" id="vF8-sW-4H1"/>
+                            <constraint firstItem="4nc-M7-c9S" firstAttribute="height" secondItem="fxF-GW-2ZA" secondAttribute="height" id="wHN-gp-rg6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Emp-5O-SBc" secondAttribute="trailing" constant="90" id="xxe-L1-Ihw"/>
+                            <constraint firstItem="4nc-M7-c9S" firstAttribute="width" secondItem="fxF-GW-2ZA" secondAttribute="width" id="yzO-Ms-v1h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6f1-b0-GA0"/>
+                                <exclude reference="U1Y-UU-Lda"/>
+                                <exclude reference="Wpa-DO-AJW"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-82.03125" y="133.59375"/>
         </scene>
     </scenes>
 </document>
