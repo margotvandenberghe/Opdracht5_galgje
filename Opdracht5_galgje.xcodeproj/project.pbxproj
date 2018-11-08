@@ -22,6 +22,7 @@
 		3F192B5B2194358D00145A23 /* galgje8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F192B4E2194358D00145A23 /* galgje8.png */; };
 		3F192B5C2194358D00145A23 /* galgje9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F192B4F2194358D00145A23 /* galgje9.png */; };
 		3F192B5D2194358D00145A23 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F192B502194358D00145A23 /* start.png */; };
+		3F192B5F2194376E00145A23 /* galgje0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F192B5E2194376E00145A23 /* galgje0.png */; };
 		3FF4F1F62178760300E53DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4F1F52178760300E53DAE /* AppDelegate.swift */; };
 		3FF4F1F82178760300E53DAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4F1F72178760300E53DAE /* ViewController.swift */; };
 		3FF4F1FB2178760300E53DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4F1F92178760300E53DAE /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		3F192B4E2194358D00145A23 /* galgje8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galgje8.png; sourceTree = "<group>"; };
 		3F192B4F2194358D00145A23 /* galgje9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galgje9.png; sourceTree = "<group>"; };
 		3F192B502194358D00145A23 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		3F192B5E2194376E00145A23 /* galgje0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galgje0.png; sourceTree = "<group>"; };
 		3FF4F1F22178760300E53DAE /* Opdracht5_galgje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opdracht5_galgje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF4F1F52178760300E53DAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF4F1F72178760300E53DAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		3F192B432194358D00145A23 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3F192B5E2194376E00145A23 /* galgje0.png */,
 				3F192B442194358D00145A23 /* galgje.jpg */,
 				3F192B452194358D00145A23 /* galgje1.png */,
 				3F192B462194358D00145A23 /* galgje10.png */,
@@ -181,6 +184,7 @@
 				3F192B572194358D00145A23 /* galgje4.png in Resources */,
 				3F192B5B2194358D00145A23 /* galgje8.png in Resources */,
 				3F192B582194358D00145A23 /* galgje5.png in Resources */,
+				3F192B5F2194376E00145A23 /* galgje0.png in Resources */,
 				3F192B522194358D00145A23 /* galgje1.png in Resources */,
 				3F192B552194358D00145A23 /* galgje2.png in Resources */,
 				3F192B592194358D00145A23 /* galgje6.png in Resources */,

@@ -117,12 +117,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hoU-Lo-1Z3">
-                                <rect key="frame" x="90" y="547" width="128" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galgje0" translatesAutoresizingMaskIntoConstraints="NO" id="tbJ-CS-4rD">
+                                <rect key="frame" x="45" y="320" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbJ-CS-4rD">
-                                <rect key="frame" x="45" y="320" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImagePlay" translatesAutoresizingMaskIntoConstraints="NO" id="hoU-Lo-1Z3">
+                                <rect key="frame" x="45" y="574" width="240" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -203,6 +203,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="256" height="256"/>
+        <image name="ImagePlay" width="90" height="62"/>
+        <image name="galgje0" width="233" height="174"/>
     </resources>
 </document>
