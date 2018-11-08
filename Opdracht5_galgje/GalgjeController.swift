@@ -9,10 +9,18 @@
 import Foundation
 
 class GalgjeController {
-    var gekozenWoord: String
+    var chosenWord: String
+    var chosenWordArray: Array<Character>
+    var numberOfTries: Int
+    var discoveredWord: String
+    var discoveredWordArray: Array<Character>
     
     init() {
-        gekozenWoord = ""
+        chosenWord = ""
+        numberOfTries = 0
+        chosenWordArray = []
+        discoveredWord = ""
+        discoveredWordArray = []
     }
     
     func checkInput(_ text: String) -> String {
@@ -21,8 +29,33 @@ class GalgjeController {
             return "Het woord moet uit precies 6 letters bestaan"
         }
         else {
-            gekozenWoord = trimmedText
+            chosenWord = trimmedText
+            setChosenWordInArray()
             return ""
         }
     }
+    
+    func setChosenWordInArray() {
+        chosenWordArray = Array(chosenWord)
+        discoveredWordArray = ["-", "-", "-", "-", "-", "-"]
+    }
+    
+    func tryLetter(letter: Character) {
+        var i = 0
+        for l in chosenWordArray {
+            if(l == letter) {
+                discoveredWordArray[i] = l
+            }
+            i = i + 1
+        }
+        setDiscoveredWordArrayToString()
+        addTry()
+    }
+    
+    func addTry() {
+        numberOfTries = numberOfTries + 1
+    }
+    
+    func setDiscoveredWordArrayToString () -> String 
+    
 }
