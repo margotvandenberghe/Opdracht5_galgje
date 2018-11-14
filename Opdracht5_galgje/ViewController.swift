@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var PV_letters: UIPickerView!
     
     @IBOutlet weak var PV_letterInsert: UIPickerView!
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var LB_fault: UILabel!
     
     @IBOutlet weak var IMG_playGame: UIImageView!
+    
+    @IBOutlet weak var IMG_try: UIImageView!
     
     var galgjeController = GalgjeController()
     
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
         
         let textField = alert.textFields![0]
         
-        alert.addAction(UIAlertAction(title: "Bewaar", style: .default, handler: {(action: UIAlertAction!) in self.checkInputWord(text: textField.text ?? "")} ))
+        alert.addAction(UIAlertAction(title: "Bewaar", style: .default, handler: {(action: UIAlertAction!) in self.checkInputWord(text: textField.text?.uppercased() ?? "")} ))
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -66,11 +68,62 @@ class ViewController: UIViewController {
         else {
             BTN_playTurn.isUserInteractionEnabled = true
             PV_letterInsert.isUserInteractionEnabled = true
+            IMG_playGame.isUserInteractionEnabled = false
         }
     }
     
+    func changePictureTry() {
+        let i = galgjeController.getNumberOfTries()
+        if(i <= 11) {
+            IMG_try.image = UIImage(named: "galgje" + String(i))
+        }
+        if(i == 11) {
+            LB_fault.text = "Je beurten zijn op, start een nieuw spel en probeer opnieuw!"
+            BTN_playTurn.isUserInteractionEnabled = false
+            PV_letterInsert.isUserInteractionEnabled = false
+            IMG_playGame.isUserInteractionEnabled = true
+        }
+        
+        
+        
+    }
     
-
-
+    @IBAction func clickButtonPlayTurn(_ sender: Any) {
+        let alfabetTopPickers = ["-", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z"]
+        
+        if let delegate = PV_letterInsert.delegate {
+            
+            let selectedValue = delegate.pickerView!(PV_letterInsert, titleForRow: PV_letterInsert.selectedRow(inComponent: 0), forComponent: 0) ?? ""
+            
+            if(selectedValue == "-") {
+                LB_fault.text = "Geef een waarde verschillend van '-' in."
+            }
+            else {
+                let result = galgjeController.tryLetter(letter: Character(selectedValue))
+                
+                if(result == true) {
+                    var i = 0
+                    for var v in galgjeController.getDiscoveredWordArray() {
+                        let row: Int = alfabetTopPickers.firstIndex(of: String(v)) ?? 0
+                        PV_letters.selectRow(row, inComponent: i, animated: true)
+                        i = i + 1
+                    }
+                    
+                    if(galgjeController.spelGewonnen() == true) {
+                        LB_fault.text = "Je hebt het spel gewonnen, proficiat! Je score is " +  String(galgjeController.getNumberOfTries())
+                        BTN_playTurn.isUserInteractionEnabled = false
+                        PV_letterInsert.isUserInteractionEnabled = false
+                        IMG_playGame.isUserInteractionEnabled = true
+                    }
+                    
+                }
+                else{
+                    changePictureTry()
+                }
+            }
+        }
+        
+        
+    }
+    
 }
-

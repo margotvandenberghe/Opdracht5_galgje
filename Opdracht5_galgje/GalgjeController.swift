@@ -12,14 +12,12 @@ class GalgjeController {
     var chosenWord: String
     var chosenWordArray: Array<Character>
     var numberOfTries: Int
-    var discoveredWord: String
     var discoveredWordArray: Array<Character>
     
     init() {
         chosenWord = ""
         numberOfTries = 0
         chosenWordArray = []
-        discoveredWord = ""
         discoveredWordArray = []
     }
     
@@ -40,22 +38,39 @@ class GalgjeController {
         discoveredWordArray = ["-", "-", "-", "-", "-", "-"]
     }
     
-    func tryLetter(letter: Character) {
+    func tryLetter(letter: Character) -> Bool {
+        var boolean = false
         var i = 0
         for l in chosenWordArray {
             if(l == letter) {
                 discoveredWordArray[i] = l
+                boolean = true
             }
             i = i + 1
         }
-        setDiscoveredWordArrayToString()
         addTry()
+        return boolean
     }
     
     func addTry() {
         numberOfTries = numberOfTries + 1
     }
     
-    func setDiscoveredWordArrayToString () -> String 
+    func getDiscoveredWordArray() -> Array<Character> {
+        return discoveredWordArray
+    }
     
+    func getNumberOfTries() -> Int {
+        return numberOfTries
+    }
+    
+    func spelGewonnen() -> Bool {
+        var boolean = true
+        for l in discoveredWordArray {
+            if(l == "-") {
+                boolean = false
+            }
+        }
+        return boolean
+    }
 }
