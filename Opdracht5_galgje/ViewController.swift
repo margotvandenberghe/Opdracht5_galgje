@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var IMG_try: UIImageView!
     
+    @IBOutlet var OC_try: [UILabel]!
+    
     var galgjeController = GalgjeController()
     
     override func viewDidLoad() {
@@ -78,7 +80,7 @@ class ViewController: UIViewController {
             IMG_try.image = UIImage(named: "galgje" + String(i))
         }
         if(i == 11) {
-            LB_fault.text = "Je beurten zijn op, start een nieuw spel en probeer opnieuw!"
+            LB_fault.text = "Je beurten zijn op, start een nieuw spel en probeer opnieuw! Je hebt het spel verloren in " +  String(galgjeController.getNumberOfTries()) + " beurten"
             BTN_playTurn.isUserInteractionEnabled = false
             PV_letterInsert.isUserInteractionEnabled = false
             IMG_playGame.isUserInteractionEnabled = true
@@ -110,7 +112,7 @@ class ViewController: UIViewController {
                     }
                     
                     if(galgjeController.spelGewonnen() == true) {
-                        LB_fault.text = "Je hebt het spel gewonnen, proficiat! Je score is " +  String(galgjeController.getNumberOfTries())
+                        LB_fault.text = "Je hebt het spel gewonnen, proficiat! Je hebt het spel uitgespeeld in " +  String(galgjeController.getNumberOfTries()) + " beurten"
                         BTN_playTurn.isUserInteractionEnabled = false
                         PV_letterInsert.isUserInteractionEnabled = false
                         IMG_playGame.isUserInteractionEnabled = true
@@ -120,10 +122,17 @@ class ViewController: UIViewController {
                 else{
                     changePictureTry()
                 }
+                
+                setNewLine()
             }
         }
         
         
+    }
+    
+    func setNewLine() {
+        let oc = [UILabel]!
+        view.addSubview(oc)
     }
     
 }
