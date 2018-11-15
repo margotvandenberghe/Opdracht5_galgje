@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         PV_letters.tag = 6
         PV_letterInsert.tag = 1
         
+        
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
@@ -116,6 +117,7 @@ class ViewController: UIViewController {
                         BTN_playTurn.isUserInteractionEnabled = false
                         PV_letterInsert.isUserInteractionEnabled = false
                         IMG_playGame.isUserInteractionEnabled = true
+                        getNameOfPlayerAlert(turns: galgjeController.getNumberOfTries())
                     }
                     
                 }
@@ -146,4 +148,23 @@ class ViewController: UIViewController {
         TXT_try.text = str + "\n" + TXT_try.text
     }
     
+    func getNameOfPlayerAlert(turns: Int) {
+        
+        let alert = UIAlertController(title: "WINNAAR", message: "Geef je naam op!", preferredStyle: .alert)
+        alert.addTextField{textField in textField.placeholder = "Bv: Margot"}
+        
+        let textField = alert.textFields![0]
+        
+        alert.addAction(UIAlertAction(title: "Bewaar", style: .default, handler: {(action: UIAlertAction!) in self.saveName(name: (textField.text ?? ""), turns: turns)} ))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func saveName(name: String, turns: Int) {
+        UserDefaults.standard.set(turns, forKey: name)
+    }
+    
+    func getAllPairs() {
+        UserDefaults.standard.dictionaryRepresentation()
+    }
 }

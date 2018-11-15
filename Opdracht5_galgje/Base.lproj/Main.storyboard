@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qfw-We-AYV">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,111 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="1mL-kE-ach">
+            <objects>
+                <viewController id="w4h-yO-4jz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y1f-1c-Fp9">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galgje11.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Vw-p3-laM">
+                                <rect key="frame" x="987" y="288" width="289" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="59T-oI-8qC"/>
+                                    <constraint firstAttribute="height" constant="289" id="uvh-6b-ShD"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hjU-C5-PSc">
+                                <rect key="frame" x="52" y="288" width="461" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Galgje is een spelletje waarbij een woord moet worden geraden door middel van het raden van individuele letters, waarbij de spelers die het woord moeten raden maar een beperkt aantal fouten mogen maken. De fouten worden weergegeven door een galg met daaraan een hangend mannetje (een stokfiguur), welke per fout steeds verder wordt opgebouwd. Uit hoeveel onderdelen de galg bestaat varieert per persoon en regio, maar dit ligt meestal rond de 10.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcX-7L-ibj">
+                                <rect key="frame" x="300" y="923" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="SPEEL NU"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="rmI-iH-rVc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aG-14-i7F">
+                                <rect key="frame" x="937" y="923" width="129" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="TOPSCORE"/>
+                                <connections>
+                                    <segue destination="2eI-J3-5Tv" kind="showDetail" id="HhH-Qp-gdM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GALGJE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08z-rl-xHr">
+                                <rect key="frame" x="558" y="131" width="251" height="78"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o8e-Or-MH8" firstAttribute="trailing" secondItem="5aG-14-i7F" secondAttribute="trailing" constant="300" id="1fU-35-ORF"/>
+                            <constraint firstItem="5Vw-p3-laM" firstAttribute="leading" secondItem="hjU-C5-PSc" secondAttribute="trailing" constant="702" id="6Zd-cc-EcN"/>
+                            <constraint firstItem="o8e-Or-MH8" firstAttribute="bottom" secondItem="5aG-14-i7F" secondAttribute="bottom" constant="59" id="AId-dg-08S"/>
+                            <constraint firstItem="5Vw-p3-laM" firstAttribute="leading" secondItem="08z-rl-xHr" secondAttribute="trailing" constant="101" id="HkD-v2-W4P"/>
+                            <constraint firstItem="5Vw-p3-laM" firstAttribute="top" secondItem="o8e-Or-MH8" secondAttribute="top" constant="218" id="PDi-do-hHz"/>
+                            <constraint firstItem="hjU-C5-PSc" firstAttribute="leading" secondItem="o8e-Or-MH8" secondAttribute="leading" constant="52" id="TbI-UE-F8i"/>
+                            <constraint firstItem="o8e-Or-MH8" firstAttribute="trailing" secondItem="08z-rl-xHr" secondAttribute="trailing" constant="557" id="XP7-B0-eMu"/>
+                            <constraint firstItem="08z-rl-xHr" firstAttribute="leading" secondItem="o8e-Or-MH8" secondAttribute="leading" constant="558" id="XcV-bT-jOS"/>
+                            <constraint firstItem="5Vw-p3-laM" firstAttribute="leading" secondItem="hjU-C5-PSc" secondAttribute="trailing" constant="474" id="Ybh-IH-lta"/>
+                            <constraint firstItem="EcX-7L-ibj" firstAttribute="leading" secondItem="o8e-Or-MH8" secondAttribute="leading" constant="300" id="aN5-7q-WY6"/>
+                            <constraint firstItem="o8e-Or-MH8" firstAttribute="bottom" secondItem="EcX-7L-ibj" secondAttribute="bottom" constant="59" id="caH-j8-Jn4"/>
+                            <constraint firstItem="o8e-Or-MH8" firstAttribute="bottom" secondItem="hjU-C5-PSc" secondAttribute="bottom" constant="184" id="rtR-cj-vJU"/>
+                            <constraint firstItem="08z-rl-xHr" firstAttribute="top" secondItem="o8e-Or-MH8" secondAttribute="top" constant="61" id="vZQ-Wl-E4H"/>
+                            <constraint firstItem="o8e-Or-MH8" firstAttribute="trailing" secondItem="5Vw-p3-laM" secondAttribute="trailing" constant="90" id="wut-HX-T9q"/>
+                            <constraint firstItem="hjU-C5-PSc" firstAttribute="top" secondItem="o8e-Or-MH8" secondAttribute="top" constant="218" id="xCQ-k4-5ya"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o8e-Or-MH8"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6Zd-cc-EcN"/>
+                                <exclude reference="HkD-v2-W4P"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="5k6-SB-AxF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHv-A8-GjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53.147877013177158" y="-186.328125"/>
+        </scene>
+        <!--Winnaars Table View Controller-->
+        <scene sceneID="0Pa-6Z-gzN">
+            <objects>
+                <tableViewController id="2eI-J3-5Tv" customClass="WinnaarsTableViewController" customModule="Opdracht5_galgje" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q0L-uy-s1G">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="921" id="c3h-ms-k6O">
+                                <rect key="frame" x="0.0" y="28" width="1366" height="921"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c3h-ms-k6O" id="L6N-NI-gqv">
+                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="920.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2eI-J3-5Tv" id="QEv-dQ-HpP"/>
+                            <outlet property="delegate" destination="2eI-J3-5Tv" id="vqu-Qa-k4i"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNV-38-J97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610.98096632503655" y="-552.5390625"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Opdracht5_galgje" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +123,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G A L G J E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSN-QN-kM4">
-                                <rect key="frame" x="576.5" y="58" width="213" height="54"/>
+                                <rect key="frame" x="576.5" y="108" width="213" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxF-GW-2ZA">
-                                <rect key="frame" x="45" y="120" width="1276" height="216"/>
+                                <rect key="frame" x="45" y="170" width="1276" height="216"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
@@ -61,13 +166,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galgje0" translatesAutoresizingMaskIntoConstraints="NO" id="tbJ-CS-4rD">
-                                <rect key="frame" x="45" y="344" width="240" height="155"/>
+                                <rect key="frame" x="45" y="394" width="240" height="105"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ImagePlay" translatesAutoresizingMaskIntoConstraints="NO" id="hoU-Lo-1Z3">
                                 <rect key="frame" x="45" y="554" width="240" height="166"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="- - - - - - " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Woy-D7-HfC">
-                                <rect key="frame" x="852" y="320" width="350" height="297"/>
+                                <rect key="frame" x="852" y="370" width="350" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="65"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -131,11 +236,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="fyU-ju-KqO" customClass="DSDelegatePV" customModule="Opdracht5_galgje" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-82.137628111273784" y="133.59375"/>
+            <point key="canvasLocation" x="610.98096632503655" y="133.59375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jZX-6g-C4Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qfw-We-AYV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aeS-S9-h5N">
+                        <rect key="frame" x="0.0" y="20" width="1366" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4h-yO-4jz" kind="relationship" relationship="rootViewController" id="dLS-Rw-fe9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="814-Ek-zgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746.26647144948754" y="-186.328125"/>
         </scene>
     </scenes>
     <resources>
         <image name="ImagePlay" width="90" height="62"/>
         <image name="galgje0" width="45" height="34"/>
+        <image name="galgje11.png" width="72" height="77"/>
     </resources>
 </document>
