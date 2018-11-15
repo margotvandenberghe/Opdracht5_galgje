@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var IMG_try: UIImageView!
     
-    @IBOutlet var OC_try: [UILabel]!
+    @IBOutlet weak var TXT_try: UITextView!
     
     var galgjeController = GalgjeController()
     
@@ -131,8 +131,19 @@ class ViewController: UIViewController {
     }
     
     func setNewLine() {
-        let oc = [UILabel]!
-        view.addSubview(oc)
+        let arr = galgjeController.getDiscoveredWordArray()
+        var str = ""
+        for var a in arr {
+            if(str != "") {
+                str = str + " " + String(a)
+            }
+            else {
+                str = str + String(a)
+            }
+            
+        }
+        
+        TXT_try.text = str + "\n" + TXT_try.text
     }
     
 }
