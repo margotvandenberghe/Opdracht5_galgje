@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     var galgjeController = GalgjeController()
     
+    var arr : [[String]] = []
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -161,10 +163,13 @@ class ViewController: UIViewController {
     }
     
     func saveName(name: String, turns: Int) {
-        UserDefaults.standard.set(turns, forKey: name)
+        arr.append([name,String(turns)])
+        UserDefaults.standard.set(arr, forKey: "arrayWinnaars")
     }
     
     func getAllPairs() {
-        UserDefaults.standard.dictionaryRepresentation()
+        print(UserDefaults.standard.dictionaryRepresentation().values)
+        let value = UserDefaults.standard.object(forKey:"arrayWinnaars") as? [[String]] ?? [[String]]()
+        print(value)
     }
 }
