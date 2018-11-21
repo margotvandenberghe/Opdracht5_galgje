@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         PV_letters.tag = 6
         PV_letterInsert.tag = 1
         
+        fillArray()
         
     }
     
@@ -167,9 +168,17 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(arr, forKey: "arrayWinnaars")
     }
     
-    func getAllPairs() {
-        print(UserDefaults.standard.dictionaryRepresentation().values)
-        let value = UserDefaults.standard.object(forKey:"arrayWinnaars") as? [[String]] ?? [[String]]()
-        print(value)
+    
+    
+func fillArray() {
+    arr.append(["Lise",String(8)])
+    arr.append(["James",String(9)])
+    arr.append(["Frans",String(5)])
+    arr.append(["Fien",String(6)])
+    arr.append(["Louise",String(7)])
+    
+    UserDefaults.standard.set(arr, forKey: "arrayWinnaars")
     }
+    
 }
+
