@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     
     var arr : [[String]] = []
     
+    var topScoreModel: TopScoreModel = TopScoreModel()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -42,8 +44,6 @@ class ViewController: UIViewController {
         
         PV_letters.tag = 6
         PV_letterInsert.tag = 1
-        
-        fillArray()
         
     }
     
@@ -95,7 +95,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickButtonPlayTurn(_ sender: Any) {
-        let alfabetTopPickers = ["-", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z"]
         
         if let delegate = PV_letterInsert.delegate {
             
@@ -110,6 +109,7 @@ class ViewController: UIViewController {
                 if(result == true) {
                     var i = 0
                     for var v in galgjeController.getDiscoveredWordArray() {
+                        let alfabetTopPickers = (PV_letterInsert.dataSource as! DSDelegatePV).alfabetTopPickers
                         let row: Int = alfabetTopPickers.firstIndex(of: String(v)) ?? 0
                         PV_letters.selectRow(row, inComponent: i, animated: true)
                         i = i + 1
@@ -165,20 +165,11 @@ class ViewController: UIViewController {
     
     func saveName(name: String, turns: Int) {
         arr.append([name,String(turns)])
-        UserDefaults.standard.set(arr, forKey: "arrayWinnaars")
+        topScoreModel.setArrayToUserDefault(arr: arr)
     }
     
     
-    
-func fillArray() {
-    arr.append(["Lise",String(8)])
-    arr.append(["James",String(9)])
-    arr.append(["Frans",String(5)])
-    arr.append(["Fien",String(6)])
-    arr.append(["Louise",String(7)])
-    
-    UserDefaults.standard.set(arr, forKey: "arrayWinnaars")
-    }
+ 
     
 }
 

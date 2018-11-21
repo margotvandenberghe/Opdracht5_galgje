@@ -9,6 +9,8 @@
 import UIKit
 
 class WinnaarsTableViewController: UITableViewController {
+    
+    var topScoreModel: TopScoreModel = TopScoreModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,7 @@ class WinnaarsTableViewController: UITableViewController {
     }
     
     func getData() -> [[String]] {
-        return UserDefaults.standard.object(forKey:"arrayWinnaars") as? [[String]] ?? [[String]]()
+        return topScoreModel.getArrayFromUserDefault()
     }
 
     /*

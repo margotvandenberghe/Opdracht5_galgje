@@ -24,6 +24,7 @@
 		3F192B5D2194358D00145A23 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F192B502194358D00145A23 /* start.png */; };
 		3F192B5F2194376E00145A23 /* galgje0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F192B5E2194376E00145A23 /* galgje0.png */; };
 		3F396EAD219D74FE00386D9C /* WinnaarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F396EAC219D74FE00386D9C /* WinnaarsTableViewController.swift */; };
+		3F5CE2F721A55C4300670935 /* TopScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CE2F621A55C4300670935 /* TopScoreModel.swift */; };
 		3FF4F1F62178760300E53DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4F1F52178760300E53DAE /* AppDelegate.swift */; };
 		3FF4F1F82178760300E53DAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4F1F72178760300E53DAE /* ViewController.swift */; };
 		3FF4F1FB2178760300E53DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4F1F92178760300E53DAE /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		3F192B502194358D00145A23 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		3F192B5E2194376E00145A23 /* galgje0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galgje0.png; sourceTree = "<group>"; };
 		3F396EAC219D74FE00386D9C /* WinnaarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnaarsTableViewController.swift; sourceTree = "<group>"; };
+		3F5CE2F621A55C4300670935 /* TopScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoreModel.swift; sourceTree = "<group>"; };
 		3FF4F1F22178760300E53DAE /* Opdracht5_galgje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opdracht5_galgje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF4F1F52178760300E53DAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF4F1F72178760300E53DAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				3FF4F2012178761400E53DAE /* Info.plist */,
 				3F192B412194276A00145A23 /* GalgjeController.swift */,
 				3F396EAC219D74FE00386D9C /* WinnaarsTableViewController.swift */,
+				3F5CE2F621A55C4300670935 /* TopScoreModel.swift */,
 			);
 			path = Opdracht5_galgje;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5CE2F721A55C4300670935 /* TopScoreModel.swift in Sources */,
 				3FF4F1F82178760300E53DAE /* ViewController.swift in Sources */,
 				3FF4F1F62178760300E53DAE /* AppDelegate.swift in Sources */,
 				3F192B402194249000145A23 /* DSDelegatePV.swift in Sources */,
